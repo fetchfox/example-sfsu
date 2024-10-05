@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "fetchfox": "^0.0.14"
+    "fetchfox": "^0.0.15"
   }
 }
