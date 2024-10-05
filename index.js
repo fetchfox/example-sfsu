@@ -1,7 +1,8 @@
 import { Crawler, SinglePromptExtractor, DiskCache } from 'fetchfox';
 
 const cache = new DiskCache('/tmp/ff_cache_1', { ttls: 10 * 24 * 3600 });
-const ai = 'openai:gpt-4o-mini';
+// const ai = 'openai:gpt-4o-mini';
+const ai = 'groq:llama3-70b-8192';
 const crawler = new Crawler({ ai, cache });
 const extractor = new SinglePromptExtractor({ ai, cache });
 
