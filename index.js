@@ -60,4 +60,14 @@ async function run() {
   }
 }
 
+async function old() {
+  for await (const link of crawler.stream(url, crawlFor)) {
+    console.log('Extract from:', link.url);
+    for await (const item of extractor.stream(link.url, questions)) {
+      console.log('Result:', link.url, item);
+    }
+  }
+}
+
+
 run();
